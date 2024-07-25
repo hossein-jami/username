@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USERNAME</title>
+  </head>
+  <body>
+    <input id="input" type="text" />
+    <button id="btn" onclick="getvalue()">Add Username</button>
+    <ul id="ul"></ul>
+  </body>
+
+  <script type="text/javascript">
+    let usernames = ["hossein" , "zabi" , "john" , "alex" , "jami" , "mobin"];
+
+     function  getvalue() {
+      const value = document.getElementById("input").value;
+
+      document.getElementById("input").value = "";
+      let ul = document.getElementById("ul");
+
+      let li = document.createElement("li")
+
+    for (users of usernames) {
+    if (users === value) {
+       alert(' فکرشم نکن، یکی دیگه بنویس') 
+       return false
+       
+    }
+     };
+    
+
+         if (value !== "") {
+        li.appendChild(document.createTextNode(value));
+        ul.appendChild(li);
+        usernames.unshift(value)
+        console.log(usernames);
+      } else {
+        alert("همینطوری خالی خالی که نمیشه");
+      }
+     
+
+        
+    
+}
+  </script>
+</html>
